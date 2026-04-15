@@ -1,5 +1,6 @@
 "use client";
 
+import BrandMark from "@/components/BrandMark";
 import SocialLink from "@/components/SocialLink";
 import { contactLinks, navItems, personalInfo } from "@/data/portfolio";
 import { SectionId } from "@/types/portfolio";
@@ -14,6 +15,9 @@ export default function DesktopSidebar({ activeSection, onNavigate }: DesktopSid
     <aside className="hidden lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-[38%] lg:flex-col lg:justify-between lg:py-24">
       <div className="space-y-9">
         <div className="space-y-3">
+          <div className="mb-3">
+            <BrandMark />
+          </div>
           <p className="font-mono text-xs uppercase tracking-[0.24em] text-accent/90">Professional Profile</p>
           <h1 className="text-[2.35rem] font-semibold tracking-tight text-text">{personalInfo.name}</h1>
           <p className="text-[1.06rem] text-text/95">{personalInfo.headline}</p>

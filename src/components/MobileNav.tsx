@@ -1,6 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
+import BrandMark from "@/components/BrandMark";
 import SocialLink from "@/components/SocialLink";
 import { contactLinks, navItems, personalInfo } from "@/data/portfolio";
 import { SectionId } from "@/types/portfolio";
@@ -17,9 +18,12 @@ export default function MobileNav({ activeSection, isOpen, onToggle, onNavigate 
     <>
       <header className="fixed inset-x-0 top-0 z-50 border-b border-line/70 bg-background/95 backdrop-blur-md lg:hidden">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <div>
-            <p className="text-base font-semibold text-text">{personalInfo.name}</p>
-            <p className="font-mono text-[0.65rem] uppercase tracking-[0.2em] text-muted">{personalInfo.headline}</p>
+          <div className="flex items-center gap-3">
+            <BrandMark compact />
+            <div>
+              <p className="text-base font-semibold text-text">{personalInfo.name}</p>
+              <p className="font-mono text-[0.65rem] uppercase tracking-[0.2em] text-muted">{personalInfo.headline}</p>
+            </div>
           </div>
           <button
             type="button"

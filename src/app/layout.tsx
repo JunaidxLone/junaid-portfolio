@@ -17,12 +17,9 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://junaid-lone-portfolio.vercel.app"),
-  title: {
-    default: "Junaid Lone | Junior Financial Crime Analyst",
-    template: "%s | Junaid Lone"
-  },
+  title: "Junaid Lone - Financial Crime Analyst",
   description:
-    "Portfolio of Junaid Lone, a Junior Financial Crime Analyst focused on transaction monitoring, investigations, KYC/EDD, and risk analysis.",
+    "Junaid Lone is a Junior Financial Crime Analyst in Manchester with experience in transaction monitoring, investigations, KYC/EDD, and risk analysis.",
   keywords: [
     "Junaid Lone",
     "Junior Financial Crime Analyst",
@@ -34,9 +31,9 @@ export const metadata: Metadata = {
     "Manchester"
   ],
   openGraph: {
-    title: "Junaid Lone | Junior Financial Crime Analyst",
+    title: "Junaid Lone - Financial Crime Analyst",
     description:
-      "Ambitious financial crime professional in Manchester with experience in monitoring, investigations, KYC/EDD, and risk analysis.",
+      "Financial crime professional in Manchester focused on transaction monitoring, investigations, KYC/EDD, and practical risk decisioning.",
     type: "website",
     locale: "en_GB",
     siteName: "Junaid Lone Portfolio"

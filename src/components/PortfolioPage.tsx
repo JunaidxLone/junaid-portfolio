@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import AnimatedSection from "@/components/AnimatedSection";
+import CursorGlow from "@/components/CursorGlow";
 import DesktopSidebar from "@/components/DesktopSidebar";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
 import Footer from "@/components/Footer";
@@ -72,7 +73,8 @@ export default function PortfolioPage() {
   };
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen overflow-x-clip">
+      <CursorGlow />
       <MobileNav
         activeSection={activeSection}
         isOpen={mobileNavOpen}
@@ -80,7 +82,7 @@ export default function PortfolioPage() {
         onNavigate={navigateToSection}
       />
 
-      <div className="mx-auto max-w-7xl px-6 pb-12 pt-24 lg:px-12 lg:pb-20 lg:pt-0">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 pb-12 pt-24 lg:px-12 lg:pb-20 lg:pt-0">
         <div className="lg:flex lg:justify-between lg:gap-14">
           <DesktopSidebar activeSection={activeSection} onNavigate={navigateToSection} />
 
