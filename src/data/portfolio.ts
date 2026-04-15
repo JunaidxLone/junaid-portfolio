@@ -26,27 +26,16 @@ export const aboutParagraphs: string[] = [
   "I am building a long-term career in financial crime and compliance, with a strong interest in practical risk prevention, investigative depth, and protecting customer trust."
 ];
 
-export const aboutFocusAreas: string[] = [
-  "Transaction Monitoring",
-  "SANCTIONS",
-  "WATCHLIST",
-  "KYC / EDD",
-  "Case Investigations",
-  "Risk Analysis",
-  "Escalations",
-  "Live High Value Payments"
-];
-
 export const experience: ExperienceRole[] = [
   {
-    company: "ZOPA BANK LIMITED",
+    company: "Zopa Bank Limited",
     title: "Financial Crime Specialist",
     location: "Manchester",
     period: "April 2026 - Present",
     points: []
   },
   {
-    company: "KROO BANK LTD",
+    company: "Kroo Bank Limited",
     title: "Junior Financial Crime Analyst",
     location: "Manchester",
     period: "October 2024 - April 2026",

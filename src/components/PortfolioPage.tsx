@@ -9,7 +9,6 @@ import Footer from "@/components/Footer";
 import MobileNav from "@/components/MobileNav";
 import SocialLink from "@/components/SocialLink";
 import {
-  aboutFocusAreas,
   aboutLead,
   aboutParagraphs,
   contactCopy,
@@ -97,22 +96,6 @@ export default function PortfolioPage() {
                     <p key={paragraph}>{paragraph}</p>
                   ))}
                 </div>
-                <ul className="grid gap-x-5 gap-y-2.5 border-t border-line/70 pt-4 sm:grid-cols-2">
-                  {aboutFocusAreas.map((focusArea) => (
-                    <li key={focusArea}>
-                      <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.12em] text-muted">
-                        <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent/80" />
-                        {focusArea}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="mt-7 flex flex-wrap gap-3">
-                {contactLinks.map((link) => (
-                  <SocialLink key={link.label} link={link} />
-                ))}
               </div>
             </AnimatedSection>
 
