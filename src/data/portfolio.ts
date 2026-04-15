@@ -18,16 +18,18 @@ export const navItems: NavItem[] = [
 ];
 
 export const aboutLead =
-  "Ambitious financial crime professional focused on protecting customers and strengthening trust in banking.";
+  "Financial crime professional focused on protecting customers and strengthening trust in banking.";
 
 export const aboutParagraphs: string[] = [
-  "I am an ambitious financial crime professional with experience in transaction monitoring, investigations, KYC/EDD, and risk analysis across fast-paced banking operations.",
-  "I have worked across high-pressure casework including remediation, alert reviews, fraud concerns, and live payment decisions while maintaining clear judgment and quality standards.",
+  "I am an ambitious financial crime professional with experience in transaction monitoring, sanctions/watchlist screening, KYC/EDD, high risk live payments and risk analysis across fast-paced banking operations.",
+  "I have worked across high-pressure casework including remediation, alert reviews, fraud concerns, and SAR's while maintaining clear judgement and quality standards.",
   "I am building a long-term career in financial crime and compliance, with a strong interest in practical risk prevention, investigative depth, and protecting customer trust."
 ];
 
 export const aboutFocusAreas: string[] = [
   "Transaction Monitoring",
+  "SANCTIONS",
+  "WATCHLIST",
   "KYC / EDD",
   "Case Investigations",
   "Risk Analysis",
@@ -88,6 +90,7 @@ export const education: EducationItem = {
 export const skills: string[] = [
   "Transaction Monitoring",
   "KYC / EDD",
+  "SANCTIONS",
   "PEP & Watchlist Screening",
   "Live High Value Payments",
   "Case Investigations",

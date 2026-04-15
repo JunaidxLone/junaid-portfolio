@@ -19,11 +19,6 @@ export default function DesktopSidebar({ activeSection, onNavigate }: DesktopSid
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-muted">{personalInfo.location}</p>
         </div>
 
-        <p className="max-w-sm text-[0.95rem] leading-relaxed text-muted">
-          Focused on financial crime prevention through transaction monitoring, investigations, and practical risk
-          decision-making in regulated banking environments.
-        </p>
-
         <nav aria-label="Section navigation">
           <ul className="space-y-2">
             {navItems.map((item, index) => {

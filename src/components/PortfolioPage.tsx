@@ -110,12 +110,6 @@ export default function PortfolioPage() {
               </div>
 
               <div className="mt-7 flex flex-wrap gap-3">
-                <a
-                  href={`mailto:${personalInfo.email}`}
-                  className="focus-ring inline-flex items-center rounded-md border border-accent/60 bg-accent/10 px-4 py-2 text-sm font-medium text-accent transition hover:border-accent hover:bg-accent/20"
-                >
-                  Get in touch
-                </a>
                 {contactLinks.map((link) => (
                   <SocialLink key={link.label} link={link} />
                 ))}
