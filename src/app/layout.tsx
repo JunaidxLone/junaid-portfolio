@@ -38,10 +38,6 @@ export const metadata: Metadata = {
     locale: "en_GB",
     siteName: "Junaid Lone Portfolio"
   },
-  icons: {
-    icon: "data:,",
-    shortcut: "data:,"
-  },
   robots: {
     index: true,
     follow: true

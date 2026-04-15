@@ -39,13 +39,13 @@ export const experience: ExperienceRole[] = [
   {
     company: "ZOPA BANK LIMITED",
     title: "Financial Crime Specialist",
-    location: "",
+    location: "Manchester",
     period: "April 2026 - Present",
     points: []
   },
   {
-    company: "Kroo Bank",
-    title: "Financial Crime Analyst / Junior Financial Crime Analyst",
+    company: "KROO BANK LTD",
+    title: "Junior Financial Crime Analyst",
     location: "Manchester",
     period: "October 2024 - April 2026",
     points: [
