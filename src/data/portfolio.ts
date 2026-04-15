@@ -21,7 +21,18 @@ export const aboutLead =
   "Ambitious financial crime professional focused on protecting customers and strengthening trust in banking.";
 
 export const aboutParagraphs: string[] = [
-  "I am an ambitious financial crime professional with experience in transaction monitoring, investigations, KYC/EDD, and risk analysis across fast-paced banking operations."
+  "I am an ambitious financial crime professional with experience in transaction monitoring, investigations, KYC/EDD, and risk analysis across fast-paced banking operations.",
+  "At Kroo Bank, I work across high-pressure casework including remediation, alert reviews, fraud concerns, and live payment decisions while maintaining clear judgment and quality standards.",
+  "I am building a long-term career in financial crime and compliance, with a strong interest in practical risk prevention, investigative depth, and protecting customer trust."
+];
+
+export const aboutFocusAreas: string[] = [
+  "Transaction Monitoring",
+  "KYC / EDD",
+  "Case Investigations",
+  "Risk Analysis",
+  "Escalations",
+  "Live High Value Payments"
 ];
 
 export const experience: ExperienceRole[] = [
@@ -100,9 +111,3 @@ export const contactLinks: ContactLink[] = [
     href: personalInfo.githubUrl
   }
 ];
-
-export const projectsPlaceholder = {
-  showProjects: false,
-  heading: "Projects",
-  description: "Projects section can be enabled later if you would like to showcase compliance-related work samples."
-};

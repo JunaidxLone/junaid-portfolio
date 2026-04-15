@@ -11,18 +11,18 @@ interface DesktopSidebarProps {
 
 export default function DesktopSidebar({ activeSection, onNavigate }: DesktopSidebarProps) {
   return (
-    <aside className="hidden lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-[38%] lg:flex-col lg:justify-between lg:py-24">
-      <div className="space-y-7">
+    <aside className="hidden lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-[40%] lg:flex-col lg:justify-between lg:py-24">
+      <div className="space-y-8">
         <div className="space-y-3">
-          <p className="font-mono text-xs uppercase tracking-[0.26em] text-accent/90">Portfolio</p>
-          <h1 className="text-4xl font-semibold tracking-tight text-text md:text-5xl">{personalInfo.name}</h1>
-          <p className="text-lg text-text/95">{personalInfo.headline}</p>
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-accent/90">Financial Crime Portfolio</p>
+          <h1 className="text-[2.55rem] font-semibold tracking-tight text-text">{personalInfo.name}</h1>
+          <p className="text-[1.08rem] text-text/95">{personalInfo.headline}</p>
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-muted">{personalInfo.location}</p>
         </div>
 
         <p className="max-w-sm text-sm leading-relaxed text-muted">
-          Focused on transaction monitoring, case investigations, and practical risk decisioning in high-pressure
-          financial crime operations.
+          Focused on financial crime prevention through transaction monitoring, investigations, and practical risk
+          decision-making in regulated banking environments.
         </p>
 
         <nav aria-label="Section navigation">

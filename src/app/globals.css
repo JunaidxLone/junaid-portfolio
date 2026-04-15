@@ -38,7 +38,7 @@ a {
 }
 
 .section-anchor {
-  scroll-margin-top: 6rem;
+  scroll-margin-top: 7rem;
 }
 
 .focus-ring {
@@ -47,7 +47,7 @@ a {
 
 @media (min-width: 1024px) {
   .section-anchor {
-    scroll-margin-top: 2rem;
+    scroll-margin-top: 3rem;
   }
 }
 

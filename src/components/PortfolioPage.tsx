@@ -4,9 +4,11 @@ import { useEffect, useMemo, useState } from "react";
 import AnimatedSection from "@/components/AnimatedSection";
 import DesktopSidebar from "@/components/DesktopSidebar";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
+import Footer from "@/components/Footer";
 import MobileNav from "@/components/MobileNav";
 import SocialLink from "@/components/SocialLink";
 import {
+  aboutFocusAreas,
   aboutLead,
   aboutParagraphs,
   contactCopy,
@@ -15,7 +17,6 @@ import {
   experience,
   navItems,
   personalInfo,
-  projectsPlaceholder,
   skills
 } from "@/data/portfolio";
 import { SectionId } from "@/types/portfolio";
@@ -24,13 +25,7 @@ export default function PortfolioPage() {
   const [activeSection, setActiveSection] = useState<SectionId>("about");
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
-  const sectionIds = useMemo(() => {
-    const ids: SectionId[] = navItems.map((item) => item.id);
-    if (projectsPlaceholder.showProjects) {
-      ids.push("projects");
-    }
-    return ids;
-  }, []);
+  const sectionIds = useMemo(() => navItems.map((item) => item.id), []);
 
   useEffect(() => {
     const sections = sectionIds
@@ -85,19 +80,30 @@ export default function PortfolioPage() {
         onNavigate={navigateToSection}
       />
 
-      <div className="mx-auto max-w-6xl px-6 pb-12 pt-24 lg:px-12 lg:pb-16 lg:pt-0">
-        <div className="lg:flex lg:justify-between lg:gap-20">
+      <div className="mx-auto max-w-7xl px-6 pb-12 pt-24 lg:px-12 lg:pb-20 lg:pt-0">
+        <div className="lg:flex lg:justify-between lg:gap-16">
           <DesktopSidebar activeSection={activeSection} onNavigate={navigateToSection} />
 
-          <main id="content" className="space-y-10 lg:w-[58%] lg:space-y-12 lg:py-24">
+          <main id="content" className="space-y-12 lg:w-[56%] lg:space-y-14 lg:py-24">
             <AnimatedSection id="about" title="About Me">
-              <div className="space-y-4">
-                <p className="max-w-3xl text-2xl font-semibold leading-tight text-text md:text-[1.95rem]">{aboutLead}</p>
+              <div className="space-y-5">
+                <p className="max-w-3xl text-[1.75rem] font-semibold leading-snug tracking-tight text-text md:text-[2rem]">
+                  {aboutLead}
+                </p>
                 <div className="space-y-4 text-base leading-relaxed text-muted">
                   {aboutParagraphs.map((paragraph) => (
                     <p key={paragraph}>{paragraph}</p>
                   ))}
                 </div>
+                <ul className="flex flex-wrap gap-2.5 pt-1">
+                  {aboutFocusAreas.map((focusArea) => (
+                    <li key={focusArea}>
+                      <span className="inline-flex items-center rounded-full border border-line bg-surface px-3 py-1.5 text-xs font-medium tracking-[0.04em] text-text">
+                        {focusArea}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
               <div className="mt-7 flex flex-wrap gap-3">
@@ -136,12 +142,6 @@ export default function PortfolioPage() {
                 ))}
               </ul>
             </AnimatedSection>
-
-            {projectsPlaceholder.showProjects ? (
-              <AnimatedSection id="projects" title={projectsPlaceholder.heading}>
-                <p className="text-base leading-relaxed text-muted">{projectsPlaceholder.description}</p>
-              </AnimatedSection>
-            ) : null}
 
             <AnimatedSection id="contact" title="Contact">
               <p className="max-w-2xl text-base leading-relaxed text-muted">{contactCopy}</p>
@@ -185,10 +185,7 @@ export default function PortfolioPage() {
               </div>
             </AnimatedSection>
 
-            <footer className="pb-3 pt-4 text-sm text-muted">
-              <p>Designed and built by Junaid Lone.</p>
-              <p className="mt-1">Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.</p>
-            </footer>
+            <Footer />
           </main>
         </div>
       </div>

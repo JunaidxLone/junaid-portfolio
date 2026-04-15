@@ -16,7 +16,7 @@ export default function MobileNav({ activeSection, isOpen, onToggle, onNavigate 
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-50 border-b border-line/70 bg-background/95 backdrop-blur-md lg:hidden">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <div>
             <p className="text-base font-semibold text-text">{personalInfo.name}</p>
             <p className="font-mono text-[0.65rem] uppercase tracking-[0.2em] text-muted">{personalInfo.headline}</p>
@@ -43,7 +43,7 @@ export default function MobileNav({ activeSection, isOpen, onToggle, onNavigate 
             transition={{ duration: 0.18 }}
             className="fixed inset-0 z-40 bg-background/98 backdrop-blur-md lg:hidden"
           >
-            <nav aria-label="Mobile section navigation" className="mx-auto flex h-full max-w-6xl flex-col px-6 pt-28">
+            <nav aria-label="Mobile section navigation" className="mx-auto flex h-full max-w-7xl flex-col px-6 pt-28">
               <ul className="space-y-2">
                 {navItems.map((item) => {
                   const isActive = activeSection === item.id;
