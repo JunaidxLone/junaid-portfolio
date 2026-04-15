@@ -19,29 +19,34 @@ function renderPoint(point: string) {
 
 export default function ExperienceTimeline({ roles }: ExperienceTimelineProps) {
   return (
-    <div className="space-y-4">
+    <div className="space-y-7">
       {roles.map((role) => (
-        <article key={`${role.company}-${role.period}`} className="rounded-xl border border-line/70 bg-surface/55 p-4 md:p-5">
-          <header className="mb-3 space-y-1.5">
-            <h3 className="text-lg font-semibold text-text">
-              {role.company}{" "}
-              <span className="font-medium text-accent/95" aria-label={`Role: ${role.title}`}>
-                - {role.title}
-              </span>
-            </h3>
-            <p className="font-mono text-[0.67rem] uppercase tracking-[0.2em] text-muted">
-              {role.location} | {role.period}
-            </p>
-          </header>
+        <article key={`${role.company}-${role.period}`} className="grid gap-3 border-t border-line/70 pt-5 first:border-t-0 first:pt-0 md:grid-cols-[minmax(0,205px)_1fr] md:gap-5">
+          <div>
+            <p className="font-mono text-[0.67rem] uppercase tracking-[0.18em] text-muted">{role.period}</p>
+            <p className="mt-1 text-xs text-muted">{role.location}</p>
+          </div>
 
-          <ul className="space-y-1.5 text-[0.84rem] leading-[1.45rem] text-muted">
-            {role.points.map((point) => (
-              <li key={point} className="flex items-start gap-2.5">
-                <span aria-hidden className="mt-[0.62rem] h-1 w-1 rounded-full bg-accent/85" />
-                <span>{renderPoint(point)}</span>
-              </li>
-            ))}
-          </ul>
+          <div>
+            <header className="mb-2.5">
+              <h3 className="text-[1.02rem] font-semibold text-text">
+                {role.company}
+                <span className="font-medium text-accent/95" aria-label={`Role: ${role.title}`}>
+                  {" "}
+                  - {role.title}
+                </span>
+              </h3>
+            </header>
+
+            <ul className="space-y-1.5 text-[0.83rem] leading-[1.42rem] text-muted">
+              {role.points.map((point) => (
+                <li key={point} className="flex items-start gap-2">
+                  <span aria-hidden className="mt-[0.6rem] h-1 w-1 rounded-full bg-accent/80" />
+                  <span>{renderPoint(point)}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </article>
       ))}
     </div>

@@ -42,7 +42,7 @@ export default function SocialLink({ link, className }: SocialLinkProps) {
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noreferrer" : undefined}
       aria-label={link.label}
-      className={`focus-ring inline-flex items-center gap-2 rounded-md border border-line px-4 py-2 text-sm text-text transition hover:border-accent/70 hover:text-accent ${className ?? ""}`}
+      className={`focus-ring inline-flex items-center gap-2 rounded-sm border border-line/80 px-3.5 py-2 text-[0.82rem] text-text transition hover:border-accent/70 hover:text-accent ${className ?? ""}`}
     >
       <SocialIcon icon={link.icon} />
       <span>{link.label}</span>

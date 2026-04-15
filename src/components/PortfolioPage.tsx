@@ -81,24 +81,25 @@ export default function PortfolioPage() {
       />
 
       <div className="mx-auto max-w-7xl px-6 pb-12 pt-24 lg:px-12 lg:pb-20 lg:pt-0">
-        <div className="lg:flex lg:justify-between lg:gap-16">
+        <div className="lg:flex lg:justify-between lg:gap-14">
           <DesktopSidebar activeSection={activeSection} onNavigate={navigateToSection} />
 
-          <main id="content" className="space-y-12 lg:w-[56%] lg:space-y-14 lg:py-24">
+          <main id="content" className="space-y-12 lg:w-[58%] lg:space-y-16 lg:py-24">
             <AnimatedSection id="about" title="About Me">
               <div className="space-y-5">
-                <p className="max-w-3xl text-[1.75rem] font-semibold leading-snug tracking-tight text-text md:text-[2rem]">
+                <p className="max-w-3xl text-[1.82rem] font-semibold leading-snug tracking-tight text-text md:text-[2.08rem]">
                   {aboutLead}
                 </p>
-                <div className="space-y-4 text-base leading-relaxed text-muted">
+                <div className="space-y-4 text-[1.01rem] leading-relaxed text-muted">
                   {aboutParagraphs.map((paragraph) => (
                     <p key={paragraph}>{paragraph}</p>
                   ))}
                 </div>
-                <ul className="flex flex-wrap gap-2.5 pt-1">
+                <ul className="grid gap-x-5 gap-y-2.5 border-t border-line/70 pt-4 sm:grid-cols-2">
                   {aboutFocusAreas.map((focusArea) => (
                     <li key={focusArea}>
-                      <span className="inline-flex items-center rounded-full border border-line bg-surface px-3 py-1.5 text-xs font-medium tracking-[0.04em] text-text">
+                      <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.12em] text-muted">
+                        <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent/80" />
                         {focusArea}
                       </span>
                     </li>
@@ -124,18 +125,18 @@ export default function PortfolioPage() {
             </AnimatedSection>
 
             <AnimatedSection id="education" title="Education">
-              <article className="rounded-xl border border-line/80 bg-surface/70 p-5 md:p-6">
-                <h3 className="text-xl font-semibold text-text">{education.institution}</h3>
-                <p className="mt-2 text-base text-accent">{education.degree}</p>
-                <p className="mt-2 font-mono text-xs uppercase tracking-[0.2em] text-muted">{education.period}</p>
+              <article className="border-l border-line/80 pl-4 md:pl-5">
+                <h3 className="text-[1.15rem] font-semibold text-text">{education.institution}</h3>
+                <p className="mt-1.5 text-[0.95rem] text-accent">{education.degree}</p>
+                <p className="mt-2 font-mono text-[0.68rem] uppercase tracking-[0.2em] text-muted">{education.period}</p>
               </article>
             </AnimatedSection>
 
             <AnimatedSection id="skills" title="Skills">
-              <ul className="flex flex-wrap gap-2">
+              <ul className="flex flex-wrap gap-2.5">
                 {skills.map((skill) => (
                   <li key={skill}>
-                    <span className="inline-flex items-center rounded-full border border-line bg-surface px-3 py-1.5 text-sm text-text transition hover:border-accent/75 hover:text-accent">
+                    <span className="inline-flex items-center rounded-sm border border-line/80 bg-surface/55 px-3 py-1.5 text-xs uppercase tracking-[0.08em] text-text transition hover:border-accent/70 hover:text-accent">
                       {skill}
                     </span>
                   </li>
@@ -144,8 +145,8 @@ export default function PortfolioPage() {
             </AnimatedSection>
 
             <AnimatedSection id="contact" title="Contact">
-              <p className="max-w-2xl text-base leading-relaxed text-muted">{contactCopy}</p>
-              <div className="mt-5 space-y-2 text-sm text-muted">
+              <p className="max-w-2xl text-[0.98rem] leading-relaxed text-muted">{contactCopy}</p>
+              <div className="mt-5 space-y-2.5 border-l border-line/70 pl-4 text-sm text-muted">
                 <p>
                   Email:{" "}
                   <a

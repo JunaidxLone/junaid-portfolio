@@ -26,7 +26,7 @@ export default function MobileNav({ activeSection, isOpen, onToggle, onNavigate 
             onClick={onToggle}
             aria-expanded={isOpen}
             aria-controls="mobile-navigation"
-            className="focus-ring rounded-md border border-line px-3 py-1.5 font-mono text-xs uppercase tracking-[0.2em] text-text hover:border-accent/70 hover:text-accent"
+            className="focus-ring rounded-sm border border-line px-3 py-1.5 font-mono text-xs uppercase tracking-[0.2em] text-text hover:border-accent/70 hover:text-accent"
           >
             {isOpen ? "Close" : "Menu"}
           </button>
@@ -45,7 +45,7 @@ export default function MobileNav({ activeSection, isOpen, onToggle, onNavigate 
           >
             <nav aria-label="Mobile section navigation" className="mx-auto flex h-full max-w-7xl flex-col px-6 pt-28">
               <ul className="space-y-2">
-                {navItems.map((item) => {
+                {navItems.map((item, index) => {
                   const isActive = activeSection === item.id;
                   return (
                     <li key={item.id}>
@@ -53,13 +53,16 @@ export default function MobileNav({ activeSection, isOpen, onToggle, onNavigate 
                         type="button"
                         onClick={() => onNavigate(item.id)}
                         aria-current={isActive ? "page" : undefined}
-                        className={`focus-ring w-full rounded-md px-4 py-3 text-left text-base transition-colors ${
+                        className={`focus-ring flex w-full items-center gap-3 rounded-sm border-l px-4 py-3 text-left text-base transition-colors ${
                           isActive
-                            ? "bg-accent/10 text-accent"
-                            : "text-text hover:bg-surface hover:text-accent focus-visible:bg-surface"
+                            ? "border-accent bg-accent/8 text-accent"
+                            : "border-line/70 text-text hover:border-accent/65 hover:bg-surface hover:text-accent focus-visible:bg-surface"
                         }`}
                       >
-                        {item.label}
+                        <span className="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-muted">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                        <span>{item.label}</span>
                       </button>
                     </li>
                   );
