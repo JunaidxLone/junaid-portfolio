@@ -24,7 +24,7 @@ export default function ExperienceTimeline({ roles }: ExperienceTimelineProps) {
         <article key={`${role.company}-${role.period}`} className="grid gap-3 border-t border-line/70 pt-5 first:border-t-0 first:pt-0 md:grid-cols-[minmax(0,205px)_1fr] md:gap-5">
           <div>
             <p className="font-mono text-[0.67rem] uppercase tracking-[0.18em] text-muted">{role.period}</p>
-            <p className="mt-1 text-xs text-muted">{role.location}</p>
+            {role.location ? <p className="mt-1 text-xs text-muted">{role.location}</p> : null}
           </div>
 
           <div>
@@ -38,14 +38,16 @@ export default function ExperienceTimeline({ roles }: ExperienceTimelineProps) {
               </h3>
             </header>
 
-            <ul className="space-y-1.5 text-[0.83rem] leading-[1.42rem] text-muted">
-              {role.points.map((point) => (
-                <li key={point} className="flex items-start gap-2">
-                  <span aria-hidden className="mt-[0.6rem] h-1 w-1 rounded-full bg-accent/80" />
-                  <span>{renderPoint(point)}</span>
-                </li>
-              ))}
-            </ul>
+            {role.points.length ? (
+              <ul className="space-y-1.5 text-[0.83rem] leading-[1.42rem] text-muted">
+                {role.points.map((point) => (
+                  <li key={point} className="flex items-start gap-2">
+                    <span aria-hidden className="mt-[0.6rem] h-1 w-1 rounded-full bg-accent/80" />
+                    <span>{renderPoint(point)}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
           </div>
         </article>
       ))}

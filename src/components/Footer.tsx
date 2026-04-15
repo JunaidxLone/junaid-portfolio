@@ -2,7 +2,6 @@ export default function Footer() {
   return (
     <footer className="border-t border-line/70 pb-3 pt-7 text-sm text-muted">
       <p>Portfolio of Junaid Lone.</p>
-      <p className="mt-1">Prepared for financial crime, compliance, and banking opportunities.</p>
       <p className="mt-2 text-xs text-muted/90">
         Design inspired by{" "}
         <a

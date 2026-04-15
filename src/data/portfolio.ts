@@ -2,7 +2,7 @@ import { ContactLink, EducationItem, ExperienceRole, NavItem } from "@/types/por
 
 export const personalInfo = {
   name: "Junaid Lone",
-  headline: "Junior Financial Crime Analyst",
+  headline: "Financial Crime Specialist",
   location: "Manchester, UK",
   email: "junaidlone2305@gmail.com",
   linkedInUrl: "https://www.linkedin.com/in/junaid-lone-68121a318/",
@@ -22,7 +22,7 @@ export const aboutLead =
 
 export const aboutParagraphs: string[] = [
   "I am an ambitious financial crime professional with experience in transaction monitoring, investigations, KYC/EDD, and risk analysis across fast-paced banking operations.",
-  "At Kroo Bank, I work across high-pressure casework including remediation, alert reviews, fraud concerns, and live payment decisions while maintaining clear judgment and quality standards.",
+  "I have worked across high-pressure casework including remediation, alert reviews, fraud concerns, and live payment decisions while maintaining clear judgment and quality standards.",
   "I am building a long-term career in financial crime and compliance, with a strong interest in practical risk prevention, investigative depth, and protecting customer trust."
 ];
 
@@ -37,10 +37,17 @@ export const aboutFocusAreas: string[] = [
 
 export const experience: ExperienceRole[] = [
   {
+    company: "ZOPA BANK LIMITED",
+    title: "Financial Crime Specialist",
+    location: "",
+    period: "April 2026 - Present",
+    points: []
+  },
+  {
     company: "Kroo Bank",
-    title: "Junior Financial Crime Analyst",
+    title: "Financial Crime Analyst / Junior Financial Crime Analyst",
     location: "Manchester",
-    period: "October 2024 - Present",
+    period: "October 2024 - April 2026",
     points: [
       "**Promoted** from Graduate Analyst after probation, delivering **90%+ QA** across case reviews and escalations.",
       "**Selected** for a specialist remediation team handling complex transaction monitoring alerts out of SLA for **3+ years**.",

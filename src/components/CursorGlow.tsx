@@ -22,10 +22,18 @@ export default function CursorGlow() {
     let currentX = targetX;
     let currentY = targetY;
     let hasMoved = false;
+    const followStrength = 0.24;
 
     const updatePosition = () => {
-      currentX += (targetX - currentX) * 0.11;
-      currentY += (targetY - currentY) * 0.11;
+      currentX += (targetX - currentX) * followStrength;
+      currentY += (targetY - currentY) * followStrength;
+
+      if (Math.abs(targetX - currentX) < 0.1) {
+        currentX = targetX;
+      }
+      if (Math.abs(targetY - currentY) < 0.1) {
+        currentY = targetY;
+      }
 
       const glow = glowRef.current;
       if (glow) {
@@ -41,6 +49,10 @@ export default function CursorGlow() {
     const handleMouseMove = (event: MouseEvent) => {
       targetX = event.clientX;
       targetY = event.clientY;
+      if (!hasMoved) {
+        currentX = targetX;
+        currentY = targetY;
+      }
       hasMoved = true;
     };
 
