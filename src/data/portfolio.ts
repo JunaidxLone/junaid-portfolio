@@ -91,7 +91,7 @@ export const skills: string[] = [
 ];
 
 export const contactCopy =
-  "I am always open to speaking with recruiters, hiring managers, and professional contacts in financial crime, risk, and compliance. If you are hiring or would like to connect, I would be glad to hear from you.";
+  "I am always open to speaking with professional contacts in financial crime, risk, and compliance. If you would like to connect, I would be glad to hear from you.";
 
 export const contactLinks: ContactLink[] = [
   {
