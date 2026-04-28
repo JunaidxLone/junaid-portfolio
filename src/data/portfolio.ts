@@ -1,4 +1,4 @@
-import { ContactLink, EducationItem, ExperienceRole, NavItem } from "@/types/portfolio";
+import { CertificationItem, ContactLink, EducationItem, ExperienceRole, NavItem } from "@/types/portfolio";
 
 export const personalInfo = {
   name: "Junaid Lone",
@@ -13,6 +13,7 @@ export const navItems: NavItem[] = [
   { id: "about", label: "About Me" },
   { id: "experience", label: "Experience" },
   { id: "education", label: "Education" },
+  { id: "certifications", label: "Certifications" },
   { id: "skills", label: "Skills" },
   { id: "contact", label: "Contact" }
 ];
@@ -75,6 +76,15 @@ export const education: EducationItem = {
   degree: "BSc Accounting (Hons)",
   period: "September 2021 - June 2024"
 };
+
+export const certifications: CertificationItem[] = [
+  {
+    name: "Python Certificate",
+    issuer: "W3Schools",
+    verifyUrl: "https://verify.w3schools.com/1QZPLS448P",
+    linkedInUrl: personalInfo.linkedInUrl
+  }
+];
 
 export const skills: string[] = [
   "Transaction Monitoring",

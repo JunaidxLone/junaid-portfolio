@@ -11,6 +11,7 @@ import SocialLink from "@/components/SocialLink";
 import {
   aboutLead,
   aboutParagraphs,
+  certifications,
   contactCopy,
   contactLinks,
   education,
@@ -109,6 +110,40 @@ export default function PortfolioPage() {
                 <p className="mt-1.5 text-[0.95rem] text-accent">{education.degree}</p>
                 <p className="mt-2 font-mono text-[0.68rem] uppercase tracking-[0.2em] text-muted">{education.period}</p>
               </article>
+            </AnimatedSection>
+
+            <AnimatedSection id="certifications" title="Certifications">
+              <div className="space-y-4">
+                {certifications.map((certification) => (
+                  <article
+                    key={`${certification.issuer}-${certification.name}`}
+                    className="border-l border-line/80 pl-4 md:pl-5"
+                  >
+                    <h3 className="text-[1.08rem] font-semibold text-text">{certification.name}</h3>
+                    <p className="mt-1 text-sm text-muted">{certification.issuer}</p>
+                    <div className="mt-3 flex flex-wrap gap-3">
+                      <a
+                        href={certification.verifyUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="focus-ring inline-flex items-center rounded-sm border border-line/80 px-3.5 py-2 text-[0.8rem] text-text transition hover:border-accent/70 hover:text-accent"
+                      >
+                        Verify Certificate
+                      </a>
+                      {certification.linkedInUrl ? (
+                        <a
+                          href={certification.linkedInUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="focus-ring inline-flex items-center rounded-sm border border-line/80 px-3.5 py-2 text-[0.8rem] text-text transition hover:border-accent/70 hover:text-accent"
+                        >
+                          View on LinkedIn
+                        </a>
+                      ) : null}
+                    </div>
+                  </article>
+                ))}
+              </div>
             </AnimatedSection>
 
             <AnimatedSection id="skills" title="Skills">

@@ -1,4 +1,4 @@
-export type SectionId = "about" | "experience" | "education" | "skills" | "contact";
+export type SectionId = "about" | "experience" | "education" | "certifications" | "skills" | "contact";
 
 export interface NavItem {
   id: SectionId;
@@ -23,4 +23,11 @@ export interface ContactLink {
   icon: "email" | "linkedin" | "github";
   label: string;
   href: string;
+}
+
+export interface CertificationItem {
+  name: string;
+  issuer: string;
+  verifyUrl: string;
+  linkedInUrl?: string;
 }
