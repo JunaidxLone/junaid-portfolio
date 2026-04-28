@@ -130,16 +130,6 @@ export default function PortfolioPage() {
                       >
                         Verify Certificate
                       </a>
-                      {certification.linkedInUrl ? (
-                        <a
-                          href={certification.linkedInUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="focus-ring inline-flex items-center rounded-sm border border-line/80 px-3.5 py-2 text-[0.8rem] text-text transition hover:border-accent/70 hover:text-accent"
-                        >
-                          View on LinkedIn
-                        </a>
-                      ) : null}
                     </div>
                   </article>
                 ))}
