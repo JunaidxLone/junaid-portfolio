@@ -9,7 +9,6 @@ import Footer from "@/components/Footer";
 import MobileNav from "@/components/MobileNav";
 import SocialLink from "@/components/SocialLink";
 import {
-  aboutLead,
   aboutParagraphs,
   certifications,
   contactCopy,
@@ -87,16 +86,11 @@ export default function PortfolioPage() {
           <DesktopSidebar activeSection={activeSection} onNavigate={navigateToSection} />
 
           <main id="content" className="space-y-12 lg:w-[58%] lg:space-y-16 lg:py-24">
-            <AnimatedSection id="about" title="About Me">
-              <div className="space-y-5">
-                <p className="max-w-3xl text-[1.82rem] font-semibold leading-snug tracking-tight text-text md:text-[2.08rem]">
-                  {aboutLead}
-                </p>
-                <div className="space-y-4 text-[1.01rem] leading-relaxed text-muted">
-                  {aboutParagraphs.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
-                  ))}
-                </div>
+            <AnimatedSection id="about" title="About Me" headingStyle="plain">
+              <div className="space-y-4 text-[1.01rem] leading-relaxed text-muted">
+                {aboutParagraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
               </div>
             </AnimatedSection>
 

@@ -5,7 +5,7 @@ export const personalInfo = {
   headline: "Financial Crime Specialist",
   location: "Manchester, UK",
   email: "junaidlone2305@gmail.com",
-  linkedInUrl: "https://www.linkedin.com/in/junaid-lone-68121a318/",
+  linkedInUrl: "https://www.linkedin.com/in/junaid-lone/",
   githubUrl: "https://github.com/JunaidxLone"
 };
 
@@ -18,45 +18,37 @@ export const navItems: NavItem[] = [
   { id: "contact", label: "Contact" }
 ];
 
-export const aboutLead =
-  "Financial crime professional focused on protecting customers and strengthening trust in banking.";
-
 export const aboutParagraphs: string[] = [
-  "I am an ambitious financial crime professional with experience in transaction monitoring, sanctions/watchlist screening, KYC/EDD, high risk live payments and risk analysis across fast-paced banking operations.",
-  "I have worked across high-pressure casework including remediation, alert reviews, fraud concerns, and SAR's while maintaining clear judgement and quality standards.",
-  "I am building a long-term career in financial crime and compliance, with a strong interest in practical risk prevention, investigative depth, and protecting customer trust."
+  "I'm currently working as a Financial Crime Specialist at Zopa Bank, having previously worked at Kroo Bank. Through these roles, I've gained hands-on experience in transaction monitoring, fraud investigations, high-value payments and KYC/EDD reviews.",
+  "My experience includes investigating suspected money mule activity, filing Suspicious Activity Reports (SARs) and working within a specialist remediation team to tackle transaction monitoring backlogs. I'm comfortable handling complex cases, assessing risks and making informed decisions, often while working to tight deadlines.",
+  "Alongside my professional experience, I've been developing my technical skills through certifications in SQL and Python. I'm naturally curious, enjoy learning new things and am always looking for opportunities to challenge myself and build on what I already know."
 ];
 
 export const experience: ExperienceRole[] = [
   {
-    company: "Zopa Bank Limited",
+    company: "Zopa Bank",
     title: "Financial Crime Specialist",
     location: "Manchester",
     period: "April 2026 - Present",
-    points: []
+    points: [
+      "Investigate **transaction monitoring** alerts, reviewing **30 financial crime cases** per day, analysing customer activity, payment behaviour, account history, and risk indicators to determine outcomes.",
+      "Handle suspected money **mule cases** in real time, applying account suspensions, completing time sensitive reviews, and documenting decisions in line with internal procedures.",
+      "Liaise with internal teams to **resolve financial crime queries**, progress reviews, and ensure consistent handling of restricted or suspended accounts.",
+      "Utilised an internal **AI powered transaction monitoring system**, alongside **Amplitude, CIFAS and open-source intelligence (OSINT)**, to support financial crime investigations, identify suspicious activity and assess financial crime risks, whilst **successfully passing probation**."
+    ]
   },
   {
-    company: "Kroo Bank Limited",
+    company: "Kroo Bank",
     title: "Junior Financial Crime Analyst",
     location: "Manchester",
     period: "October 2024 - April 2026",
     points: [
-      "**Promoted** from Graduate Analyst after probation, delivering **90%+ QA** across case reviews and escalations.",
-      "**Selected** for a specialist remediation team handling complex transaction monitoring alerts out of SLA for **3+ years**.",
-      "Reviewed transaction monitoring alerts and **Live High Value Payments**, including suspensions, fraud concerns, and urgent SLA-driven work.",
-      "Conducted **KYC/EDD** and holistic personal monitoring investigations into activity inconsistent with customer profiles.",
-      "Used **LexisNexis ThreatMetrix, CIFAS, and Moody's Analytics RDC** to assess risk, PEP/watchlist matches, and red flags.",
-      "Supported onboarding by **training new starters**, offering second opinions, and covering casework during absences."
-    ]
-  },
-  {
-    company: "Lone Solicitors",
-    title: "Office Clerk",
-    location: "Manchester",
-    period: "July 2022 - August 2022",
-    points: [
-      "Drafted and proofread client letters and legal correspondence across **17 live immigration matters**.",
-      "Supported **confidential case administration** and document handling for applications and submissions."
+      "**Promoted from Graduate Analyst to Junior Analyst** after passing probation and demonstrating strong judgement with **90%+ QA scores** across case reviews and escalations.",
+      "Selected for a **specialist remediation team** tackling a **transaction monitoring backlog**, focusing on the more complex cases.",
+      "Reviewed **transaction monitoring alerts and live High Value Payments** with tight SLAs, writing detailed rationales and escalations.",
+      "Conducted **KYC/EDD reviews and holistic personal monitoring cases**, investigating account activity that didn’t align with the customer’s profile.",
+      "Used **LexisNexis (ThreatMetrix), CIFAS, Moody’s Analytics RDC** and internal case systems to assess risk, PEP/Watchlist matches, and red flags.",
+      "**Provided training for new starters**, offered second opinions to colleagues and covered casework during team absences to ensure consistent coverage."
     ]
   },
   {
@@ -65,8 +57,8 @@ export const experience: ExperienceRole[] = [
     location: "Manchester",
     period: "July 2021 - August 2021",
     points: [
-      "Supported bookkeeping and tax admin by reconciling client records and preparing figures for reporting.",
-      "Used **Xero** and **QuickBooks** to streamline routine bookkeeping tasks and reduce manual errors."
+      "Supported **bookkeeping and tax admin by reconciling** client records and preparing detailed figures for reporting.",
+      "Used **Xero and QuickBooks** to streamline routine bookkeeping tasks and reduce manual errors."
     ]
   }
 ];
@@ -83,21 +75,28 @@ export const certifications: CertificationItem[] = [
     issuer: "W3Schools",
     verifyUrl: "https://verify.w3schools.com/1QZPLS448P",
     linkedInUrl: personalInfo.linkedInUrl
+  },
+  {
+    name: "SQL Certificate",
+    issuer: "W3Schools",
+    verifyUrl: "https://verify.w3schools.com/1R7AV4QZIA",
+    linkedInUrl: personalInfo.linkedInUrl
   }
 ];
 
 export const skills: string[] = [
   "Transaction Monitoring",
-  "KYC / EDD",
-  "SANCTIONS",
+  "KYC/EDD",
   "PEP & Watchlist Screening",
   "Live High Value Payments",
-  "Case Investigations",
-  "Escalations",
+  "Case Investigations & Escalations",
   "SARs",
-  "LexisNexis ThreatMetrix",
+  "LexisNexis (ThreatMetrix)",
   "CIFAS",
-  "Moody's Analytics RDC"
+  "Moody’s Analytics RDC",
+  "Amplitude",
+  "SQL",
+  "Python"
 ];
 
 export const contactCopy =
