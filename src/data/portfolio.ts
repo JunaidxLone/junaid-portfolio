@@ -15,6 +15,7 @@ export const navItems: NavItem[] = [
   { id: "education", label: "Education" },
   { id: "certifications", label: "Certifications" },
   { id: "skills", label: "Skills" },
+  { id: "outside-work", label: "Outside Work" },
   { id: "contact", label: "Contact" }
 ];
 
@@ -98,6 +99,14 @@ export const skills: string[] = [
   "SQL",
   "Python"
 ];
+
+export const hobbyWriting = {
+  title: "Archaeogenetics",
+  description:
+    "Outside work, I explore archaeogenetics as a hobby, using PLINK for PCA, SHAPEIT4 and an admixture simulator. I share short write-ups and notes on what I'm learning on Substack.",
+  href: "https://substack.com/@junaidlone/notes",
+  linkLabel: "Read my notes on Substack"
+};
 
 export const contactCopy =
   "I am always open to speaking with professional contacts in financial crime, risk, and compliance. If you would like to connect, I would be glad to hear from you.";

@@ -41,9 +41,9 @@ export default function MobileNav({ activeSection, isOpen, onToggle, onNavigate 
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.18 }}
-            className="fixed inset-0 z-40 bg-background/98 backdrop-blur-md lg:hidden"
+            className="fixed inset-0 z-40 overflow-y-auto bg-background/98 backdrop-blur-md lg:hidden"
           >
-            <nav aria-label="Mobile section navigation" className="mx-auto flex h-full max-w-7xl flex-col px-6 pt-28">
+            <nav aria-label="Mobile section navigation" className="mx-auto flex min-h-full max-w-7xl flex-col px-6 pt-28">
               <ul className="space-y-2">
                 {navItems.map((item, index) => {
                   const isActive = activeSection === item.id;

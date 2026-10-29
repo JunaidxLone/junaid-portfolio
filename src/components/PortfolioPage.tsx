@@ -15,6 +15,7 @@ import {
   contactLinks,
   education,
   experience,
+  hobbyWriting,
   navItems,
   personalInfo,
   skills
@@ -140,6 +141,23 @@ export default function PortfolioPage() {
                   </li>
                 ))}
               </ul>
+            </AnimatedSection>
+
+            <AnimatedSection id="outside-work" title="Outside Work">
+              <article className="border-l border-line/80 pl-4 md:pl-5">
+                <h3 className="text-[1.15rem] font-semibold text-text">{hobbyWriting.title}</h3>
+                <p className="mt-3 text-[0.98rem] leading-relaxed text-muted">{hobbyWriting.description}</p>
+                <a
+                  href={hobbyWriting.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="focus-ring mt-4 inline-flex items-center gap-2 rounded-sm text-sm text-accent underline decoration-accent/40 underline-offset-4 transition hover:decoration-accent"
+                >
+                  {hobbyWriting.linkLabel}
+                  <span aria-hidden="true">↗</span>
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
+              </article>
             </AnimatedSection>
 
             <AnimatedSection id="contact" title="Contact">
